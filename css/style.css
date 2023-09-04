@@ -1,0 +1,284 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "aileron", sans-serif;
+  background-color: black;
+  color: #ffffff;
+  line-height: 1.5;
+}
+
+h1 {
+  font-size: 40px;
+  font-weight: 900;
+  font-weight: 800;
+  letter-spacing: 0;
+  text-shadow: 2px 0px 2px rgba(255, 0, 255, 0.5),
+    -2px 0px 2px rgba(0, 255, 191, 0.5), 0px 0px 10px rgba(49, 122, 255, 1);
+}
+
+h2 {
+  font-size: 25px;
+  font-weight: 500;
+}
+
+h3 {
+  font-size: 15px;
+}
+
+/* Navbar (og header margins) */
+
+header {
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: top 0.5s; /* Transition */
+  position: fixed;
+  background-color: black;
+  width: 100%;
+  top: 0;
+  left: 0; /* Reset the left position */
+  right: 0; /* Reset the right position */
+}
+
+.navbar ul {
+  list-style: none;
+}
+
+.navbar ul li {
+  display: inline;
+  margin-left: 20px;
+  margin-right: 20px;
+  font-weight: 700;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  text-shadow: 2px 0px 2px rgba(255, 0, 255, 0.5),
+    -2px 0px 2px rgba(0, 255, 191, 0.5), 0px 0px 10px rgba(49, 122, 255, 1);
+}
+
+.navbar-left img {
+  width: 150px;
+  height: auto;
+  /* object-fit: cover; */
+}
+
+.navbar-right {
+}
+
+@media screen and (max-width: 768px) {
+  .navbar {
+    display: block;
+    transition: 500000s;
+    position: relative;
+  }
+
+  .navbar ul li {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}
+
+/* Navbar slut */
+
+/* Logo og velkomst-tekst (og margin for sitet) */
+
+.content-container {
+  margin-top: 10%;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.logo-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 10%;
+  padding-bottom: 15%;
+}
+
+.logo-container {
+  max-width: 100vh;
+}
+
+.logo-container img {
+  height: auto;
+  width: 100%;
+  object-fit: cover;
+}
+
+.logo {
+  width: 100px; /* Adjust the initial size as needed */
+  animation: zoomIn 1.5s ease-out; /* Customize animation duration and easing */
+}
+
+@media screen and (max-width: 768px) {
+  .logo {
+    animation: none;
+  }
+}
+
+@keyframes zoomIn {
+  0% {
+    transform: scale(0.5); /* Initial scale value, make it smaller if needed */
+    opacity: 0; /* Start with opacity at 0 for a fade-in effect */
+  }
+  100% {
+    transform: scale(1); /* Final scale value, 1 is the original size */
+    opacity: 1; /* Fully visible at the end of the animation */
+  }
+}
+
+.logo-tekst h1 {
+  font-weight: 700;
+}
+
+/* Logo og velkomst-tekst slut */
+
+/* Horisontal linje */
+
+.horisontal-linje {
+  margin-top: 10%;
+  height: 0.5vw;
+  border-radius: 10px;
+  background-color: #ffffff;
+  box-shadow: 10px 0px 10px rgba(255, 0, 255, 0.5),
+    -2px 0px 2px rgba(0, 255, 191, 0.5), 0px 0px 10px rgba(49, 122, 255, 1);
+}
+
+/* Tema Oversigt */
+
+.tema-oversigt {
+  padding-top: 15%;
+}
+
+.tema-container {
+  /* display: flex;
+  align-items: flex-start; */
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 5px;
+}
+
+.tema-left {
+  flex: 1;
+}
+
+.tema-left p {
+  font-weight: 100;
+  font-size: 20px;
+}
+
+.tema-left h1 {
+  padding-bottom: 1%;
+}
+
+.tema-right {
+  flex: 1;
+}
+
+.tema-right .project-link {
+  font-weight: 900;
+  font-size: 20px;
+  padding-bottom: 5%;
+}
+
+.tema-right p {
+  font-size: 25px;
+  font-weight: 500;
+  padding-bottom: 2.5%;
+  text-align: justify;
+}
+
+.tema-right a {
+  text-decoration: none;
+  color: white; /* Link farve på højre side i temaoversigten */
+  text-shadow: 10px 0px 10px rgba(255, 0, 255, 0.5),
+    -5px 0px 2px rgba(0, 255, 191, 0.5), 0px 0px 10px rgba(49, 122, 255, 1);
+}
+
+.to-i-et-tema {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 2.5%;
+}
+
+@media screen and (max-width: 768px) {
+  .to-i-et-tema {
+    grid-template-columns: 1fr;
+  }
+}
+
+.tema-oversigt .image-container {
+  max-width: 700px;
+  align-items: center; /* Centrer billedet vertikalt */
+  justify-content: center; /* Centrer billedet horisontalt */
+  margin: 0 auto; /* Centrer kontaineren vertikalt */
+  display: flex; /* Flexbox til containeren */
+  border: 2px solid #00000000; /* Border properties (color, width, style) */
+  box-shadow: 10px 0px 10px rgba(255, 0, 255, 0.5),
+    -6px 0px 2px rgba(0, 255, 191, 0.5), 0px 0px 10px rgba(49, 122, 255, 1);
+  border-radius: 15px;
+}
+
+.tema-oversigt .image-container img {
+  height: auto;
+  width: 100%;
+  border: 5px solid #000;
+  border-radius: 15px;
+}
+
+/* Tema Oversigt slut */
+
+/* Footer */
+
+footer {
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-bottom: 5%;
+}
+
+footer h1 {
+  font-size: 30px;
+}
+
+.contact-container {
+  /* justify-content: space-between; */
+  padding-top: 10%;
+}
+
+/* .contact-container p {
+  text-align: left;
+} */
+
+.contact-container ul {
+  list-style: none;
+  display: flex;
+}
+
+.contact-container ul li {
+  display: inline;
+  margin-right: 5%;
+  font-weight: 700;
+}
+
+.contact-container a {
+  color: white;
+  text-decoration: none;
+}
+
+.contact-container h1 {
+  padding-bottom: 2.5%;
+}
+
+/* Footer slut*/
